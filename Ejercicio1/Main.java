@@ -1,43 +1,41 @@
 package Ejercicio1;
 public class Main {
 
-protected float saldo;
-protected int númeroConsignaciones = 0;
-protected int númeroRetiros = 0;
-protected float tasaAnual;
-protected float comisiónMensual = 0;
+    protected float saldo;
+    protected int numeroConsignaciones = 0;
+    protected int numeroRetiros = 0;
+    protected float tasaAnual;
+    protected float comisionMensual = 0;
 
-
-public Main (float saldo, float tasaAnual) {
-this.saldo = saldo;
-this.tasaAnual = tasaAnual;
-}
-
-public void consignar(float cantidad) {
-saldo = saldo + cantidad; 
-
-númeroConsignaciones = númeroConsignaciones + 1;
-}
-
-public void retirar(float cantidad) {
-    float nuevoSaldo = saldo - cantidad;
-
-    if (nuevoSaldo >= 0) {
-    saldo -= cantidad;
-    númeroRetiros = númeroRetiros + 1;
-    } else {
-    System.out.println("La cantidad a retirar excede el saldo actual.");
+    public Main(float saldo, float tasaAnual) {
+        this.saldo = saldo;
+        this.tasaAnual = tasaAnual;
     }
+
+    public void consignar(float cantidad) {
+        saldo += cantidad;
+        numeroConsignaciones++;
+    }
+
+    public void retirar(float cantidad) {
+        float nuevoSaldo = saldo - cantidad;
+
+        if (nuevoSaldo >= 0) {
+            saldo -= cantidad;
+            numeroRetiros++;
+        } else {
+            System.out.println("La cantidad a retirar excede el saldo actual.");
+        }
     }
 
     public void calcularInterés() {
-    float tasaMensual = tasaAnual / 12; 
-    float interesMensual = saldo * tasaMensual;
-    saldo += interesMensual;
+        float tasaMensual = tasaAnual / 12;
+        float interesMensual = saldo * tasaMensual;
+        saldo += interesMensual;
     }
-    
+
     public void extractoMensual() {
-    saldo -= comisiónMensual;
-    calcularInterés();
+        saldo -= comisionMensual;
+        calcularInterés();
     }
-    }
+} 
