@@ -1,6 +1,6 @@
 package Ejercicio1;
 
-public class CuentaAhorros extends Main {
+public class CuentaAhorros extends Cuenta {
 
     private boolean activa;
 

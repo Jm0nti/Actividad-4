@@ -1,6 +1,6 @@
 package Ejercicio1;
 
-public class CuentaCorriente extends Main {
+public class CuentaCorriente extends Cuenta {
 
     float sobregiro;
 
