@@ -1,4 +1,4 @@
-package CarreraCiclística;
+package Ejercicio4;
 
 import java.util.*;
 

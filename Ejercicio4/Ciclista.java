@@ -1,4 +1,4 @@
-package CarreraCiclística;
+package Ejercicio4;
 
 public abstract class Ciclista {
     private int identificador;

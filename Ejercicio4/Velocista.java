@@ -1,4 +1,4 @@
-package CarreraCiclística;
+package Ejercicio4;
 
 public class Velocista extends Ciclista {
     private double potenciaPromedio;

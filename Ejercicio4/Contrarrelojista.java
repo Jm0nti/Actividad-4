@@ -1,4 +1,4 @@
-package CarreraCiclística;
+package Ejercicio4;
 
 public class Contrarrelojista extends Ciclista {
     private double velocidadMáxima;
